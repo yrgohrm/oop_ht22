@@ -31,12 +31,20 @@ public class NumberGame {
         else {
             // nästa spelare får gissa
             currentPlayer.guessedWrong();
-            swapPlayer();
+            swapCurrentPlayer();
             return false;
         }
     }
 
-    private void swapPlayer() {
+    public String getCurrentPlayerName() {
+        return currentPlayer.getName();
+    }
+
+    public boolean hasPlayerWon() {
+        return currentPlayer.getScore() >= 10;
+    }
+
+    private void swapCurrentPlayer() {
         if (currentPlayer == playerOne) {
             currentPlayer = playerTwo;
         }

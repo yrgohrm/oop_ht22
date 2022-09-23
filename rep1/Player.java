@@ -16,7 +16,7 @@ public class Player {
     }
 
     public void guessedRight() {
-        this.score += 3;
+        this.score += 6;
     }
 
     public void guessedWrong() {
