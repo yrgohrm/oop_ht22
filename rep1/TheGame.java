@@ -1,18 +1,19 @@
 import java.util.Scanner;
 
 public class TheGame {
+
+    private static Player createPlayer(Scanner input, String num) {
+        System.out.println("Vad heter spelare " + num + "?");
+        String playerOneName = input.nextLine();
+
+        return new Player(playerOneName);
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Vad heter spelare ett?");
-        String playerOneName = input.nextLine();
-
-        Player playerOne = new Player(playerOneName);
-
-        System.out.println("Vad heter spelare två?");
-        String playerTwoName = input.nextLine();
-
-        Player playerTwo = new Player(playerTwoName);
+        Player playerOne = createPlayer(input, "ett");
+        Player playerTwo = createPlayer(input, "två");
 
         NumberGame game = new NumberGame(playerOne, playerTwo);
 
