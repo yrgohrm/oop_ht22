@@ -1,6 +1,8 @@
 package se.yrgo.oop.pokemon;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Card {
@@ -14,9 +16,10 @@ public class Card {
     private int hp;
     private List<Move> moves;
 
-    public Card(String name, int type, int electric, int grass, int water, int hp, List<Move> moves) {
+    public Card(String name, int type, int electric, int grass, int water, int hp,
+            List<Move> moves) {
         this.name = name;
-    
+
         this.cost = new int[3];
 
         this.cost[Card.ELECTRIC] = electric;
@@ -28,5 +31,42 @@ public class Card {
         this.moves = new ArrayList<>(moves);
     }
 
-    
+    public String getName() {
+        return name;
+    }
+
+    public int getCost(int type) {
+        return cost[type];
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public List<Move> getMoves() {
+        return Collections.unmodifiableList(moves);
+    }
+
+    @Override
+    public String toString() {
+        return "Card [name=" + name + ", cost=" + Arrays.toString(cost) + ", type=" + typeToString(type) + ", hp="
+                + hp + ", moves=" + moves + "]";
+    }
+
+    public static String typeToString(int type) {
+        switch (type) {
+            case ELECTRIC:
+                return "electric";
+            case GRASS:
+                return "grass";
+            case WATER:
+                return "water";
+            default:
+                return "unknown";
+        }
+    }
 }

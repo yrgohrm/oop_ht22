@@ -1,5 +1,7 @@
 package se.yrgo.oop.pokemon;
 
+import java.util.Arrays;
+
 public class Move {
     private int[] cost;
     private String description;
@@ -21,4 +23,11 @@ public class Move {
     public String getDescription() {
         return description;
     }
+
+    @Override
+    public String toString() {
+        return "Move [cost=" + Arrays.toString(cost) + ", description=" + description + "]";
+    }
+
+    
 }
