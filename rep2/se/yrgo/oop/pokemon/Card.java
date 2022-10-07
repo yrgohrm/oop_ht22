@@ -6,6 +6,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class Card {
+    // to make indexing into our cost arrays define
+    // some constants. This is "ok" but there are better
+    // and more safe ways to do it (but requires more code)
     public static final int ELECTRIC = 0;
     public static final int GRASS = 1;
     public static final int WATER = 2;
@@ -20,6 +23,8 @@ public class Card {
             List<Move> moves) {
         this.name = name;
 
+        // arrays are reference objects and we must create
+        // them with new, otherwise this.cost would be null
         this.cost = new int[3];
 
         this.cost[Card.ELECTRIC] = electric;
