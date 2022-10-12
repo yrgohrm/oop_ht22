@@ -12,7 +12,7 @@ public class App {
      * 
      * @param n the number to take the factorial for
      * @return the factorial
-     * @throws IllegalArgumentException - sdfkdjskdj
+     * @throws IllegalArgumentException if the argument n is less than 1
      */
     private static int fac(int n) {
         if (n < 1) {
