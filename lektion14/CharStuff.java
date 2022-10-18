@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
 
 public class CharStuff {
     public static void main(String[] args) throws IOException {
@@ -11,7 +12,7 @@ public class CharStuff {
         }
 
         try (InputStream is = Files.newInputStream(Path.of("test.txt"))) {
-            byte[] data = new byte[100];
+            byte[] data = new byte[24];
             int bytesRead = is.read(data);
             System.out.println("Bytes read: " + bytesRead);
         }

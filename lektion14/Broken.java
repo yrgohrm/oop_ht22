@@ -4,9 +4,13 @@ import java.util.Scanner;
 
 public class Broken {
     private static int min(List<Integer> values) {
-        int minValue = values.get(1);
+        if (values == null || values.isEmpty()) {
+            throw new IllegalArgumentException("list must not be empty");
+        }
 
-        for (int i = 2; i <= values.size(); ++i) {
+        int minValue = values.get(0);
+
+        for (int i = 1; i < values.size(); ++i) {
             int value = values.get(i);
             if (minValue > value) {
                 minValue = value;
@@ -23,7 +27,13 @@ public class Broken {
             while ((i = scanner.nextInt()) != 0) {
                 values.add(i);
             }
-            System.out.println("Min value: " + min(values));
+
+            if (values.isEmpty()) {
+                System.out.println("You did not enter any numbers.");
+            }
+            else {
+                System.out.println("Min value: " + min(values));
+            }
         }
     }
 }
