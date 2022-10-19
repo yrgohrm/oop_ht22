@@ -8,12 +8,12 @@ public class Game {
             while (true) {
                 System.out.println("Gissa det hemliga nummret:");
                 int guessedNumber = scanner.nextInt();
-                int res = game.guess(guessedNumber);
-                if (res == 0) {
+                GuessResult res = game.guess(guessedNumber);
+                if (res == GuessResult.CORRECT) {
                     System.out.println("Du gissade rätt!");
                     break;
                 }
-                else if (res == -1) {
+                else if (res == GuessResult.TOO_HIGH) {
                     System.out.println("Det sökta talet är mindre.");
                 }
                 else {

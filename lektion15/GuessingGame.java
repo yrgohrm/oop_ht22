@@ -9,17 +9,17 @@ public class GuessingGame {
         this.guesses = 0;
     }
 
-    public int guess(int number) {
+    public GuessResult guess(int number) {
         guesses++;
 
         if (number == secretNumber) {
-            return 0;
+            return GuessResult.CORRECT;
         }
         else if (number > secretNumber) {
-            return -1;
+            return GuessResult.TOO_HIGH;
         }
         else {
-            return 1;
+            return GuessResult.TOO_LOW;
         }
     }
 
