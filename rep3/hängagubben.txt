@@ -1,0 +1,32 @@
+- Slumpmässigt ord från fil
+- Visa antal bokstäver i ordet
+- Gissa bokstav eller hela ordet
+- Max 10 gissningar
+(- Inte gissa samma bokstav)
+
+Börja med att man spelar mot sig själv, dvs. enbart en spelare.
+
+Exempel:
+
+Ord att gissa: ********
+Skriv en bokstav om du vill gissa en bokstav.
+Skriv ordet om du vill gissa ordet.
+Gissningar kvar: 10
+Skriv din gissning: a
+
+Ord att gissa: *a******
+Skriv en bokstav om du vill gissa en bokstav.
+Skriv ordet om du vill gissa ordet.
+Gissningar kvar: 9
+Skriv din gissning: n
+
+Ord att gissa: *a*****n
+Skriv en bokstav om du vill gissa en bokstav.
+Skriv ordet om du vill gissa ordet.
+Gissningar kvar: 8
+Skriv din gissning: bakelsen
+
+Du gissade fel.
+Gissningar kvar: 7
+Skriv din gissning:
+
