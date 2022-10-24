@@ -11,6 +11,9 @@ public class AddressBookEntry implements Comparable<AddressBookEntry> {
 
     @Override
     public int compareTo(AddressBookEntry o) {
+
+        // jämför this.name (detta objekts namn) med det andra objektets namn
+
         return name.compareTo(o.name);
         // return phone.compareTo(o.phone);
     }
