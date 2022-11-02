@@ -18,10 +18,11 @@ public class Pair2<T1 extends Comparable<T1>, T2 extends Comparable<T2>>
 
     @Override
     public int compareTo(Pair2<T1, T2> o) {
-        if (val1.compareTo(o.getVal1()) == 0) {
+        int res = val1.compareTo(o.getVal1());
+        if (res == 0) {
             return val2.compareTo(o.getVal2());
         }
 
-        return 0;
+        return res;
     }
 }
